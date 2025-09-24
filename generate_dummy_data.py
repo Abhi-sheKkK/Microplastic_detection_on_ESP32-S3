@@ -16,7 +16,7 @@ import pandas as pd
 from scipy.signal import find_peaks, peak_widths
 from scipy.stats import skew
 import os
-
+import matplotlib.pyplot as plt
 # -----------------------
 # Config (tweak these)
 # -----------------------
@@ -25,8 +25,8 @@ HR_SAMPLING_HZ = 2000         # high-res sampling frequency used for waveform ge
 DOWNSAMPLED_POINTS = 200      # samples per row after downsampling (ESP32-friendly)
 MAX_PARTICLES = 8             # maximum number of microplastics per window (label)
 N_ROWS = 3000                 # number of rows to generate
-NOISE_STD = 0.02              # background Gaussian noise (on high-res signal)
-BASELINE_DRIFT = 0.02         # amplitude of slow baseline drift
+NOISE_STD = 0.3             # background Gaussian noise (on high-res signal)
+BASELINE_DRIFT = 0.2       # amplitude of slow baseline drift
 MIN_PULSE_WIDTH_MS = 5        # min pulse width in ms (realistic small pulses)
 MAX_PULSE_WIDTH_MS = 50       # max pulse width in ms
 MIN_PULSE_AMP = 0.2           # min pulse amplitude
