@@ -1,0 +1,17 @@
+# Flash size for 16 MB flash chip
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="16MB"
+
+# Partition table settings for custom partitions.csv
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_OFFSET=0x8000
+
+
+# FreeRTOS settings for single-core operation
+CONFIG_FREERTOS_UNICORE=y
+
+
+# Optimize for size to reduce flash usage
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+CONFIG_ESPTOOLPY_NO_STUB=y
